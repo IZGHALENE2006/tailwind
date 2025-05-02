@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+<style>
+
+#addTaskBtn {
+      background-color: #3b82f6;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    #taskForm {
+      display: none;
+      margin-bottom: 20px;
+   
+
+    }
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .task-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      transition: 0.6s;
+    }
+    .task-card:hover{
+      background-color: rgb(229, 235, 181);
+    }
+
+    .task-card h1 {
+      margin: 0 0 10px;
+      font-family: serif;
+      font-size: 30px;
+    }
+
+    .task-card p {
+      margin: 0 0 15px;
+    }
+    .task-card .actions button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .modify {
+      background-color: #2563eb;
+      color: white;
+      transition: 0.4s;
+    }
+    .modify:hover{
+      background-color: #103689;
+    }
+
+    .delete {
+      background-color: #e12f2f;
+      color: white;
+      transition: 0.4s;
+    }
+    .delete:hover{
+      background-color: #c50404;
+      
+    }
+
+</style>
+</head>
+<body  style="background-color: #f4f4f4;" >
+    <header class="bg-amber-400 w-full h-40 space-y-5 flex flex-col justify-center" >
+     <div class="text-center ">
+       <h1 class="text-6xl font-bold"><span class="text-amber-600">Task</span>Flow</h1>
+     </div>
+     <div class="space-x-7 text-center">
+        <a href="" class="font-serif text-black hover:text-amber-700 transition-colors" >Homme</a>
+       <a href="" class="font-serif text-black hover:text-amber-700 transition-colors" >About </a>
+       <a href="http://127.0.0.1:5500/tailwind/src/contact.html" class="font-serif text-black hover:text-amber-700 transition-colors">Contacte</a>
+     </div>
+    </header>
+    <form id="taskForm" action="file.php" method="post">
+      <input type="text" id="taskTitle" placeholder="Task title" required name="title">
+      <textarea id="taskDescription" placeholder="Task description..." required name="description"></textarea>
+      <button type="submit" class="mt-2 px-6 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out" name="submite">Add Task</button>
+    </form>
+    <main class="space-y-2.5  " >
+      <div class="flex items-center">
+        <button class=" mt-2 px-6 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out " id="addTaskBtn">
+          Add a new task
+        </button>
+         
+
+
+
+        
+      </div>
+      <div id="taskContainer" >
+        <!-- <div class="w-full h-36 bg-white space-y-2 pl-4 flex flex-col justify-center shadow shadow-gray-500 rounded-3xl" >
+            <h1 class="font-bold text-black text-2xl font-serif" >task titel</h1>
+            <div class=""><p class="text-black ">Brief description of the task...</p></div>
+            <div class="actions">
+              <button class="mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 text-black font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out">Modify </button>
+              <button class="mt-2 px-3 py-1 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out ">Delete</button>
+            </div>
+        </div> -->
+      </div>
+    </main>
+
+</body>
+<script src="file.js"></script>
+</html>
