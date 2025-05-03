@@ -25,16 +25,39 @@ taskForm.addEventListener("submit", function (e) {
       <button class="delete">Delete</button>
     </div>
   `;
+  taskForm.style.display = "none";
+const deleteBtn = card.querySelector(".delete");
+deleteBtn.addEventListener("click", function () {
+card.remove(); // حذف الكرت
+
+})
 
   taskContainer.appendChild(card);
 
-  // document.getElementById("taskTitle").value = "";
-  // document.getElementById("taskDescription").value = "";
+  document.getElementById("taskTitle").value = "";
+  document.getElementById("taskDescription").value = "";
 
-  // إخفاء الفورم من جديد (اختياري)
-  taskForm.style.display = "none";
-});
-
-card.querySelector(".delete").addEventListener("click", () => {
-  card.remove()
+  
 })
+
+// إخفاء الفورم من جديد (اختياري)
+
+
+
+// var del =document.getElementsByClassName("delete")
+// del.addEventListener("click", () => {
+//   taskContainer.removeChild(card)
+// })
+// const deleteBtn = card.querySelector(".delete");
+// deleteBtn.addEventListener("click", () => {
+//   taskContainer.removeChild(card);
+// });
+
+// taskContainer.addEventListener("click", function (e) {
+//   if (e.target.classList.contains("delete")) {
+//     const card = e.target.closest(".task-card");
+//     if (card) {
+//       card.remove(); // حذف الكرت
+//     }
+//   }
+// });
