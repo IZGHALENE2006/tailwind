@@ -1,4 +1,5 @@
 const addTaskBtn = document.getElementById("addTaskBtn");
+const closeTaskBtn = document.getElementById("x");
 const taskForm = document.getElementById("taskForm");
 const taskContainer = document.getElementById("taskContainer");
 
@@ -7,13 +8,19 @@ addTaskBtn.addEventListener("click", () => {
   taskForm.style.display = taskForm.style.display === "none" ? "block" : "none";
 });
 
+// إخفاء الفورم
+closeTaskBtn.addEventListener("click", () => {
+  taskForm.style.display = taskForm.style.display === "none" ? "block" : "none";
+});
+
 taskForm.addEventListener("submit", function (e) {
   e.preventDefault(); // منع إعادة تحميل الصفحة
 
   // جلب القيم الحالية من الحقول
   const title = document.getElementById("taskTitle").value;
+  const title_Majuscule = title.toUpperCase()
   const description = document.getElementById("taskDescription").value;
-
+  const time = document.getElementById("tasktime").value
   // إنشاء عنصر كرت المهمة
   const card = document.createElement("div");
   card.className = "task-card";
@@ -32,7 +39,7 @@ taskForm.addEventListener("submit", function (e) {
     </div>
 
 
-    <h1>${title}</h1>
+    <h1 id="title_and_time">${title_Majuscule} <span id="span_time">${time}</span></h1>
     <p>${description}</p>
     <div class="actions">
         
