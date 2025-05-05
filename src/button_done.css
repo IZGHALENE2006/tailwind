@@ -1,0 +1,79 @@
+.card{
+  box-shadow: 5px 5px green;
+}
+
+.done_div{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+  }
+
+  
+  .checkbox input {
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    --sizer: var(--toast-success-sz, 40px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    z-index: 1;
+    border-radius: 999px;
+  }
+  .checkmark,
+  .checkmark path {
+    transition:
+      all 0.5s linear 0s,
+      stroke 0.15s,
+      fill 0.15s;
+  }
+  
+  .checkbox input:checked ~ .checkmark {
+    fill: hsl(49, 100%, 43%);
+    stroke: hsl(0, 0%, 100%);
+  }
+  .checkbox input:checked ~ .checkmark path {
+    animation: checked_success 0.8s linear 0s both;
+    stroke-dashoffset: 162.6;
+    stroke-dasharray: 0 162.6 28 134.6;
+  }
+  
+  .checkbox input:where(:not(:checked)) ~ .checkmark {
+    fill: hsl(0, 0%, 100%);
+    stroke: hsl(0, 0%, 35%);
+  }
+  .checkbox input:where(:not(:checked)) ~ .checkmark path {
+    stroke-dashoffset: 162.6;
+    stroke-dasharray: 0 200 158 134.6;
+  }
+  
+  .sizer {
+    width: var(--sizer);
+    min-width: var(--sizer);
+    max-width: var(--sizer);
+    height: var(--sizer);
+    min-height: var(--sizer);
+    max-height: var(--sizer);
+  }
+  
