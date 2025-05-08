@@ -6,6 +6,7 @@ const taskContainer = document.getElementById("taskContainer");
 addTaskBtn.addEventListener("click", () => {
   // إظهار أو إخفاء الفورم
   taskForm.style.display = taskForm.style.display === "none" ? "block" : "none";
+  
 });
 
 // إخفاء الفورم
@@ -36,10 +37,12 @@ taskForm.addEventListener("submit", function (e) {
     ></path>
     </svg>
     </label>
+
     </div>
+    
 
 
-    <h1 id="title_and_time">${title_Majuscule} <span id="span_time">${time}</span></h1>
+    <h1 id="title_and_time">${title_Majuscule}<span id="span_time">${time}</span></h1>
     <p>${description}</p>
     <div class="actions">
         
@@ -109,17 +112,18 @@ done.addEventListener("change", function () {
     card.style.scale = "0.99"
     mof.style.display="none"
     del.style.width="200px"
+    del.style.textDecoration="none"}
    
-  } else {
+   else {
     card.style.backgroundColor = "white"
     card.style.opacity = "1"
     card.style.textDecoration = "none";
     card.style.opacity = "1"
     card.style.scale = "1"
-     mof.style.display="block"
-     actions.style.display="flex"
+    
+     
     del.style.width="100px"
-   
+       del.style.textDecoration="none"
 
 
     

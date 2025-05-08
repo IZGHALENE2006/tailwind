@@ -40,7 +40,20 @@ nav a{
   display: flex;
   align-items: center;
   color: rgb(27, 27, 27);
+  border: transparent 1px  #ffc70f ;
+
   
+}
+.log a{
+  background-color: #ffc70f;
+  color: rgb(27, 27, 27);
+  border-radius: 25px;
+  transition: 0.4s;
+}
+.log a:hover{
+  background-color: transparent;
+  border: solid 1px  #ffc70f ;
+  border-radius: 25px;
 }
 #nav_element:hover{
   background-color: #ffc70f;
@@ -50,6 +63,7 @@ nav a{
   
 
 }
+
 
 
 nav li:first-child{
@@ -227,11 +241,21 @@ video{
   flex-wrap: wrap;
   padding: 40px 20px;
   text-align: center;
+ 
 }
 
 .feature-item {
   max-width: 250px;
   margin: 30px;
+ border: 2px #ffc70f solid;
+ padding: 10px;
+ border-radius: 10px;
+ background-color: white;
+ box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
+ transition: 0.6s;
+}
+.feature-item:hover{
+  box-shadow: 0px 10px 10px #ffc70f;
 }
 
 .feature-item i {

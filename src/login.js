@@ -11,10 +11,17 @@ loginBtn.addEventListener("click", () => {
   container.classList.remove("active");
 });
 
+var body_design = document.getElementById("body_design");
+var darke = document.getElementById("theme");
 
-function darkmode() {
-  var dkmode = document.getElementById("theme")
-  var container = document.getElementById("container")
-  
 
-}
+
+darke.addEventListener("change", function () {
+  if (darke.checked) {
+    body_design.style.backgroundColor="#000011"
+ 
+  }
+  else{
+    body_design.style.backgroundColor="#fffaee"
+  }
+});
