@@ -43,7 +43,7 @@ taskForm.addEventListener("submit", function (e) {
 
 
     <h1 id="title_and_time">${title_Majuscule}<span id="span_time">${time}</span></h1>
-    <p>${description}</p>
+    <p id="iid">${description}</p>
     <div class="actions">
         
 
@@ -135,28 +135,34 @@ done.addEventListener("change", function () {
   taskContainer.appendChild(card);
   document.getElementById("taskTitle").value = "";
   document.getElementById("taskDescription").value = "";
+const taskmod =document.getElementById("taskmod")
 
+
+var save = document.getElementById("sub")
+ var h1 = document.getElementById("title_and_time")
+ var p =  document.getElementById("iid")
+ var span_time = document.getElementById("span_time")
+const modify = card.querySelector(".modify")
+//button modify
+modify.addEventListener("click",()=>{
+//  var h1value = card.querySelectorAll("title_and_time").value
+//  var pvalue =  card.querySelectorAll("iid").value
+// var taskTitlemode =document.getElementById("taskTitlemod")
+// var taskDescriptionmode =document.getElementById("taskDescriptionmod")
   
+//   taskTitlemode.value=h1value
+//   taskDescriptionmode.value=pvalue
+taskmod.style.display="block"
+})
+//button save
+save.onclick = function(){
+var taskTitlemod =document.getElementById("taskTitlemod").value
+var taskDescriptionmod =document.getElementById("taskDescriptionmod").value
+var tasktimemod =document.getElementById("tasktimemod").value
+h1.textContent =taskTitlemod
+p.textContent =taskDescriptionmod
+span_time.value=tasktimemod
+taskmod.style.display="none"
+}
 })
 
-// إخفاء الفورم من جديد (اختياري)
-
-
-
-// var del =document.getElementsByClassName("delete")
-// del.addEventListener("click", () => {
-//   taskContainer.removeChild(card)
-// })
-// const deleteBtn = card.querySelector(".delete");
-// deleteBtn.addEventListener("click", () => {
-//   taskContainer.removeChild(card);
-// });
-
-// taskContainer.addEventListener("click", function (e) {
-//   if (e.target.classList.contains("delete")) {
-//     const card = e.target.closest(".task-card");
-//     if (card) {
-//       card.remove(); // حذف الكرت
-//     }
-//   }
-// });

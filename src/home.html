@@ -174,21 +174,22 @@
     color: rgb(247, 6, 6);
     
   }
-
+#taskmod{
+  display: none;
+}
 </style>
 </head>
 <body  style="background-color: #f4f4f4;" >
 
 
 
-    <header class="bg-amber-400 w-full h-40 space-y-5 flex flex-col justify-center" >
+    <header class="bg-amber-400 w-full h-30 space-y-5 flex flex-col justify-center shadow-lg shadow-amber-400" >
      <div class="text-center ">
-       <h1 class="text-6xl font-bold"><span class="text-amber-600">Task</span>Flow</h1>
+       <h1 class="text-6xl cursor-pointer font-bold  "><span class="text-amber-700">Task</span>Flow</h1>
      </div>
      <div class="space-x-7 text-center">
-        <a href="" class="font-serif text-black hover:text-white transition-colors" >Home</a>
-        <a href="" class="font-serif text-black hover:text-white transition-colors" >About </a>
-        <a href="contact.html" class="font-serif text-black hover:text-white transition-colors">Contact</a>
+        <a href="" class="font-sans  text-black hover:text-white transition-colors text-1x1" >Home</a>
+       
      </div>
     </header>
 
@@ -238,7 +239,19 @@ id="addTaskBtn"
     </div>
 
     <main class="space-y-2.5  " >
+     <div id="taskmod">
+                  <button type="submit" class="mt-2 px-6 py-2 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out bg-amber-300" name="submite" id="sub">save</button>
 
+        <div id="What_task" style="margin-top: 20px;">modify to task </div>
+        <form id="form_tasks" action="file.php" method="post" class="modal-container-body rtf">
+          <input type="text" id="taskTitlemod" placeholder="Task title" required name="title" class="
+          mt-5">
+          <textarea id="taskDescriptionmod" placeholder="modify description" name="description"></textarea>
+          <input type="time" id="tasktimemod" placeholder="modify title" required name="title" class="
+          mt-5">
+          
+        </form> 
+      </div>
       <div id="taskContainer" >
         <!-- <div class="w-full h-36 bg-white space-y-2 pl-4 flex flex-col justify-center shadow shadow-gray-500 rounded-3xl" >
             <h1 class="font-bold text-black text-2xl font-serif" >task titel</h1>
