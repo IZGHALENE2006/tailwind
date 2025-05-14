@@ -34,22 +34,22 @@
         <form action="file.php" method="post">
           <h1>Sign Up</h1>
           <span>use your email for registeration</span>
-          <input type="text" id="name" placeholder="Name" />
-          <input type="email" id="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button id="submit" type="submit">Sign Up</button>
+          <input type="text" id="name" name="namee" placeholder="Name" />
+          <input type="email" id="email" name="emaile" placeholder="Email" />
+          <input type="password" name="passworde" placeholder="Password" />
+          <button id="submit" type="submit" name="submit">Sign Up</button>
         </form>
       </div>
 
       
       <div class="form-container sign-in" >
-        <form>
+        <form action="file.php" method="post">
           <h1>Sign In</h1>
           <span>use your email & password</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="email" placeholder="Email" name="email"  />
+          <input type="password" placeholder="Password" name="password" />
           <a href="#">Forget Your Password?</a>
-          <button>Sign In</button>
+          <button type="submit" name="signin">Sign In</button>
         </form>
       </div>
       <div class="toggle-container">

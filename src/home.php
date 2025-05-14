@@ -253,14 +253,7 @@ id="addTaskBtn"
         </form> 
       </div>
       <div id="taskContainer" >
-        <!-- <div class="w-full h-36 bg-white space-y-2 pl-4 flex flex-col justify-center shadow shadow-gray-500 rounded-3xl" >
-            <h1 class="font-bold text-black text-2xl font-serif" >task titel</h1>
-            <div class=""><p class="text-black ">Brief description of the task...</p></div>
-            <div class="actions">
-              <button class="mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 text-black font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out">Modify </button>
-              <button class="mt-2 px-3 py-1 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out ">Delete</button>
-            </div>
-        </div> -->
+      
       </div>
     </main>
 

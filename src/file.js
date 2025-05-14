@@ -42,7 +42,7 @@ taskForm.addEventListener("submit", function (e) {
     
 
 
-    <h1 id="title_and_time">${title_Majuscule}<span id="span_time">${time}</span></h1>
+    <h1 id="title_and_time">${title_Majuscule}<span id="span_time" class="time">${time}</span></h1>
     <p id="iid">${description}</p>
     <div class="actions">
         
@@ -141,7 +141,9 @@ const taskmod =document.getElementById("taskmod")
 var save = document.getElementById("sub")
  var h1 = document.getElementById("title_and_time")
  var p =  document.getElementById("iid")
- var span_time = document.getElementById("span_time")
+ var span_time = card.querySelector(".time")
+
+
 const modify = card.querySelector(".modify")
 //button modify
 modify.addEventListener("click",()=>{
@@ -161,8 +163,13 @@ var taskDescriptionmod =document.getElementById("taskDescriptionmod").value
 var tasktimemod =document.getElementById("tasktimemod").value
 h1.textContent =taskTitlemod
 p.textContent =taskDescriptionmod
-span_time.value=tasktimemod
+span_time.textContent=tasktimemod
+
 taskmod.style.display="none"
+var taskTitlemod =document.getElementById("taskTitlemod").value=""
+var taskDescriptionmod =document.getElementById("taskDescriptionmod").value=""
+
 }
+
 })
 
